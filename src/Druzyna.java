@@ -2,8 +2,8 @@ package src;
 
 import java.util.ArrayList;
 public class Druzyna {
-    private ArrayList<Czlowiek> zawodnicy = new ArrayList<Czlowiek>();
-    private ArrayList<Czlowiek> reprezentacja = new ArrayList<Czlowiek>();
+    private ArrayList<Zawodnik> zawodnicy = new ArrayList<Zawodnik>();
+    private ArrayList<Zawodnik> reprezentacja = new ArrayList<Zawodnik>();
     private int iloscZawodnikow = 0;
     private int iloscRep = 0;
     private int punkty = 0;
@@ -16,7 +16,7 @@ public class Druzyna {
     public void dodajpunkty(int a){
         punkty += a;
     }
-    public void dodajZawodnika(Czlowiek a){
+    public void dodajZawodnika(Zawodnik a){
         if (iloscZawodnikow < 10){
             zawodnicy.add(a);
             iloscZawodnikow += 1;
@@ -36,10 +36,10 @@ public class Druzyna {
         }
         else System.out.println("Błąd");
     }
-    public Czlowiek getZawodnik(int a){
+    public Zawodnik getZawodnik(int a){
         return zawodnicy.get(a);
     }
-    public Czlowiek getRep(int a){
+    public Zawodnik getRep(int a){
         return reprezentacja.get(a);
     }
     public void wplac(int a){

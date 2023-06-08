@@ -1,7 +1,7 @@
 package src;
 
 
-public class Czlowiek {
+public class Zawodnik {
     private String imie = "Dżon";
     private int sila = 50;
     private int refleks = 50;
@@ -11,7 +11,7 @@ public class Czlowiek {
     private int waga = 50;
     private int zmeczenie = 0;
     private int jakosc = 2;
-    public Czlowiek(String imie, int sila, int refleks, int szybkosc, int celnosc, int wzrost, int waga) {
+    public Zawodnik(String imie, int sila, int refleks, int szybkosc, int celnosc, int wzrost, int waga) {
         if (czyParametryPoprawne(sila, refleks, szybkosc, celnosc, wzrost, waga)) {
             this.imie = imie;
             this.sila = sila;

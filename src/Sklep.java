@@ -2,13 +2,13 @@ package src;
 
 import java.util.ArrayList;
 public class Sklep {
-    private static ArrayList<Czlowiek> zawodnicydowyboru = new ArrayList<Czlowiek>();
+    private static ArrayList<Zawodnik> zawodnicydowyboru = new ArrayList<Zawodnik>();
     private static int ilosc = 0;
-    public static void dodajZawodnika(Czlowiek a){
+    public static void dodajZawodnika(Zawodnik a){
         zawodnicydowyboru.add(a);
         ilosc += 1;
     }
-    public static Czlowiek getZawodnik(int a){
+    public static Zawodnik getZawodnik(int a){
         if(a>-1 && a<ilosc) {
             return zawodnicydowyboru.get(a);
         }
