@@ -1,7 +1,8 @@
 package src;
 
+import java.io.Serializable;
 import java.util.Random;
-public class Mecz {
+public class Mecz implements Serializable {
     public Druzyna druzyna1;
     public Druzyna druzyna2;
     public Sedzia Sedzia;
@@ -14,8 +15,18 @@ public class Mecz {
         meczID = currentID;
         currentID += 1;
         this.druzynaWygrana = new Druzyna();
-
+        druzynaWygrana.nazwaDruzyny = "brak";
     }
-
+    public void UstalWynik(Druzyna druzynaWygrana){
+        this.druzynaWygrana = druzynaWygrana;
+    }
+    public String GetSedziow(){
+        return Sedzia.toString();
+    }
+    @Override
+    public String toString(){
+        String s = meczID + ".";
+        return s;
+    }
 
 }

@@ -1,32 +1,53 @@
 package src;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-public class Druzyna {
-    private ArrayList<Zawodnik> zawodnicy = new ArrayList<Zawodnik>();
+public class Druzyna implements Serializable {
+    public ArrayList<Zawodnik> Zawodnicy;
     private ArrayList<Zawodnik> reprezentacja = new ArrayList<Zawodnik>();
     private int iloscZawodnikow = 0;
     private int iloscRep = 0;
     private int punkty = 0;
     private int saldo = 2000;
-    private String nazwa = "cegła team";
+    public int druzynaID;
+    public static int currentID = 1;
+    public int IloscZwyciestw = 0;
+    public String nazwaDruzyny;
+
+    public Druzyna(){
+        Zawodnicy = new ArrayList<Zawodnik>();
+    }
+
+    public Druzyna(String nazwa, int iloscZwyciestw){
+        nazwaDruzyny = nazwa;
+        druzynaID = currentID;
+        this.IloscZwyciestw = iloscZwyciestw;
+        currentID += 1;
+        Zawodnicy = new ArrayList<Zawodnik>();
+    }
 
     public Druzyna(String nazwa){
-        this.nazwa = nazwa;
+        nazwaDruzyny = nazwa;
+        druzynaID = currentID;
+        this.IloscZwyciestw = 0;
+        currentID += 1;
+        Zawodnicy = new ArrayList<Zawodnik>();
     }
     public void dodajpunkty(int a){
         punkty += a;
     }
     public void dodajZawodnika(Zawodnik a){
         if (iloscZawodnikow < 10){
-            zawodnicy.add(a);
+            Zawodnicy.add(a);
             iloscZawodnikow += 1;
+            System.out.println("Dodawno zawodnika pomyślnie\n");
         }
         else System.out.println("Drużyna ma maksymalną ilość zawodników");
     }
     void dodajDoRep(int a){
         if (a<6){
-            if (zawodnicy.get(a).getZmeczenie() > 20) {
-                reprezentacja.add(zawodnicy.get(a));
+            if (Zawodnicy.get(a).getZmeczenie() > 20) {
+                reprezentacja.add(Zawodnicy.get(a));
             }
         }
     }
@@ -37,7 +58,7 @@ public class Druzyna {
         else System.out.println("Błąd");
     }
     public Zawodnik getZawodnik(int a){
-        return zawodnicy.get(a);
+        return Zawodnicy.get(a);
     }
     public Zawodnik getRep(int a){
         return reprezentacja.get(a);
