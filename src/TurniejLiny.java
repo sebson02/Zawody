@@ -1,2 +1,4 @@
-package src;public class TurniejLiny {
+package src;
+
+public class TurniejLiny {
 }

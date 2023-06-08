@@ -1,2 +1,4 @@
-package src;public class MeczLiny {
+package src;
+
+public class MeczLiny {
 }

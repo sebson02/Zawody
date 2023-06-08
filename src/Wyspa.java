@@ -1,2 +1,4 @@
-package src;public class Wyspa {
+package src;
+
+public class Wyspa {
 }

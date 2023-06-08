@@ -1,2 +1,4 @@
-package src;public class MeczSiatkowki {
+package src;
+
+public class MeczSiatkowki {
 }
