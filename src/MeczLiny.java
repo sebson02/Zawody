@@ -41,6 +41,14 @@ public class MeczLiny extends Mecz implements Serializable {
         }
         return suma;
     }
+    private int obliczSzczescie(){
+        Random x = new Random();
+
+        int luck1 = x.nextInt(80,101);
+        int luck2 = x.nextInt(80,101);
+
+        return
+    }
 
 
 
