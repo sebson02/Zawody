@@ -1,8 +1,9 @@
 package src;
 
 import java.util.Random;
+import java.io.Serializable;
 
-public class MeczLiny extends Mecz {
+public class MeczLiny extends Mecz implements Serializable {
     public MeczLiny(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2){
         this.Sedzia = Sedzia;
         this.druzyna1 = druzyna1;

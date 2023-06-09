@@ -1,6 +1,7 @@
 package src;
+import java.io.Serializable;
 
-public class Sedzia {
+public class Sedzia implements Serializable{
     private String imie;
     private int skutecznosc;
     private int przychylnosc1;
